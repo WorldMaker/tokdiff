@@ -15,13 +15,10 @@ tool, lexname, f1, f2 = sys.argv
 
 lexer = pygmets.get_lexer_by_name(lexname)
 
-a = file(f1).read()
-b = file(f2).read()
+a = pygments.lex(file(f1).read(), lexer)
+b = pygments.lex(file(f2).read(), lexer)
 
-sm = SequenceMatcher(None,
-    pygments.lex(file(f1).read(), lexer),
-    pygments.lex(file(f2).read(), lexer),
-)
+sm = SequenceMatcher(None, a, b)
 
 for op, a1, a2, b1, b2 in sm.get_opcodes():
     if op == 'equal':
