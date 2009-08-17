@@ -7,7 +7,7 @@ import sys
 This is a simple diff utility based upon pygments' lexer token streams.
 """
 
-if len(sys.argv != 4):
+if len(sys.argv) != 4:
     print "Usage: tokdiff.py lexername file1 file2"
     sys.exit(1)
 
