@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from difflib import SequenceMatcher
 import pygments
+import pygments.lexers
 import sys
 
 """
