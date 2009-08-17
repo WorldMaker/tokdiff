@@ -13,7 +13,7 @@ if len(sys.argv) != 4:
 
 tool, lexname, f1, f2 = sys.argv
 
-lexer = pygments.get_lexer_by_name(lexname)
+lexer = pygments.lexers.get_lexer_by_name(lexname)
 
 a = pygments.lex(file(f1).read(), lexer)
 b = pygments.lex(file(f2).read(), lexer)
