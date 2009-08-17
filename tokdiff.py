@@ -16,8 +16,8 @@ tool, lexname, f1, f2 = sys.argv
 
 lexer = pygments.lexers.get_lexer_by_name(lexname)
 
-a = pygments.lex(file(f1).read(), lexer)
-b = pygments.lex(file(f2).read(), lexer)
+a = list(pygments.lex(file(f1).read(), lexer))
+b = list(pygments.lex(file(f2).read(), lexer))
 
 sm = SequenceMatcher(None, a, b)
 
