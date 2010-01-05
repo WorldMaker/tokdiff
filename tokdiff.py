@@ -51,7 +51,7 @@ if __name__ == "__main__":
     group.add_argument('-u', '--unidiff', action='store_true',
         help='Unidiff-like character-based diff (default)')
     group.add_argument('-d', '--delta', action='store_true',
-        help='Simplified intermediate delta')
+        help='Simplified intermediate delta (unstable)')
     group.add_argument('-c', '--compare', action='store_true',
         help='HTML comparison of tokenized diff to char diffs')
     data = parser.parse_args()
